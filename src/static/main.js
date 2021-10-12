@@ -1,5 +1,19 @@
 const PUBLIC_WEB_PUSH = "BC8gPePaG-zjIkRM6lbFiipnU5dmrl8uwl1UyTPFUUyXQa7xiB-nxc1e8ivXlyIw_7asJfEXEWgcI_yVeNUGjYw";
 
+async function handleSubmit(event) {
+  event.preventDefault();
+  const formEl = document.forms.namedItem("pushNotificationForm");
+  const formFields = formEl.elements;
+
+  const form = {
+    title: formFields.namedItem("title").value,
+    icon: formFields.namedItem("icon").value,
+    message: formFields.namedItem("message").value,
+  };
+
+  console.debug(form);
+}
+
 async function subscription() {
   const serviceWork = await navigator.serviceWorker.register("/servicework.js", { scope: "/" });
 

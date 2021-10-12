@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="icon" type="image/png" href="/icon.png" />
     <link rel="stylesheet" href="/main.css" />
 
@@ -13,6 +20,27 @@
     <title>Push notification</title>
   </head>
   <body>
-    <h1>Push Notification</h1>
+    <form class="form" name="pushNotificationForm" onsubmit="handleSubmit(event)">
+      <header class="header">
+        <h1>Push Notification</h1>
+      </header>
+      <main class="content">
+        <div class="field">
+          <label class="label" for="title">Titulo</label>
+          <input class="input" id="title" name="title" type="text" placeholder="Titulo da notificação" />
+        </div>
+        <div class="field">
+          <label class="label" for="icon">Icone</label>
+          <input class="input" id="icon" name="icon" type="text" placeholder="Icone da notificação" />
+        </div>
+        <div class="field">
+          <label class="label" for="message">Mensagem</label>
+          <textarea class="textarea" id="message" name="message" placeholder="Mensagem da notificação"></textarea>
+        </div>
+      </main>
+      <footer class="footer">
+        <button class="button submit" type="submit">Enviar</button>
+      </footer>
+    </form>
   </body>
 </html>
