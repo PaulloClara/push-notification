@@ -14,7 +14,7 @@ app.use(express_1.default.urlencoded({ extended: false }));
 app.use(express_1.default.json());
 app.use(express_1.default.static(path_1.default.join(__dirname, "..", "frontend")));
 app.use(router_1.default);
-const PORT = 7000;
+const PORT = process.env.PORT || 7000;
 app.listen(PORT);
 console.info(`\n\n\n\n\tServidor rodando em http://localhost:${PORT}\n\n\n`);
 //# sourceMappingURL=index.js.map

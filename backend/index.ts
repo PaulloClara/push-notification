@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "..", "frontend")));
 app.use(router);
 
-const PORT = 7000;
+const PORT = process.env.PORT || 7000;
 
 app.listen(PORT);
 console.info(`\n\n\n\n\tServidor rodando em http://localhost:${PORT}\n\n\n`);
