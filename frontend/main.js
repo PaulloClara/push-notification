@@ -16,6 +16,11 @@ async function handleSubmit(event) {
 }
 
 async function sendNotification() {
+  if (Notification.permission !== "granted") {
+    alert("Você precisa aceitar receber notificações!");
+    return;
+  }
+
   await fetch("/subscription", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
