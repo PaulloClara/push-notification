@@ -1,6 +1,6 @@
 {
   "name": "push-notification",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Brincando com push notification",
   "main": "dist/index.js",
   "repository": "https://github.com/PaulloClara/push-notification",
@@ -8,9 +8,9 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "dev": "ts-node-dev 'src/index.ts'",
-    "build": "tsc",
-    "start": "yarn build && node dist/index.js"
+    "dev": "ts-node-dev 'backend/index.ts'",
+    "start": "node dist/index.js",
+    "build": "tsc"
   },
   "dependencies": {
     "dotenv": "^10.0.0",

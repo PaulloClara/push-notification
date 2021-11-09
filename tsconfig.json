@@ -23,18 +23,18 @@
     "baseUrl": ".",
     "paths": {
       "@src/*": [
-        "./src/*"
+        "backend/*"
       ],
     },
     "rootDirs": [
-      "./src",
+      "backend",
     ],
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
   },
   "include": [
-    "./src/**/*.ts",
-    "./src/**/*.js",
+    "backend/**/*.ts",
+    "backend/**/*.js",
   ],
   "exclude": [
     "./node_modules/*",

@@ -10,7 +10,7 @@ app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-app.use(express.static(path.join(__dirname, "static")));
+app.use(express.static(path.join(__dirname, "..", "frontend")));
 app.use(router);
 
 const PORT = 7000;
