@@ -2,15 +2,12 @@ import { Router } from "express";
 import webPush from "./webpush";
 
 const router = Router();
-router.post("/subscription", async (request, response) => {
-  const subscription = request.body;
-  const payload = {
-    title: "Teste titulo",
-    message: "Teste mensagem",
-  };
 
+router.post("/subscription", async (request, response) => {
   try {
-    await webPush.sendNotification(subscription, JSON.stringify(payload));
+    const { subscription, form } = request.body;
+
+    await webPush.sendNotification(subscription, JSON.stringify(form));
   } catch (error) {
     console.error(error);
   }

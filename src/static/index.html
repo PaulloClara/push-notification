@@ -27,15 +27,21 @@
       <main class="content">
         <div class="field">
           <label class="label" for="title">Titulo</label>
-          <input class="input" id="title" name="title" type="text" placeholder="Titulo da notificação" />
+          <input class="input" id="title" name="title" type="text" placeholder="Titulo da notificação" required />
         </div>
         <div class="field">
           <label class="label" for="icon">Icone</label>
-          <input class="input" id="icon" name="icon" type="text" placeholder="Icone da notificação" />
+          <input class="input" id="icon" name="icon" type="text" placeholder="Icone da notificação (url)" />
         </div>
         <div class="field">
           <label class="label" for="message">Mensagem</label>
-          <textarea class="textarea" id="message" name="message" placeholder="Mensagem da notificação"></textarea>
+          <textarea
+            class="textarea"
+            id="message"
+            name="message"
+            placeholder="Mensagem da notificação"
+            required
+          ></textarea>
         </div>
       </main>
       <footer class="footer">
